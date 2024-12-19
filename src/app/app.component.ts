@@ -1,11 +1,11 @@
-import { Component, ElementRef, signal, ViewChild } from '@angular/core';
+import { Component, ElementRef, signal, viewChild } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatIconModule } from '@angular/material/icon';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-root',
-  imports: [MatIconModule, CommonModule],
+  imports: [MatIconModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
@@ -14,7 +14,7 @@ export class AppComponent {
   fileSize = signal(0);
   uploadProgress = signal(0);
   imagePreview = signal('');
-  @ViewChild('fileInput') fileInput: ElementRef | undefined;
+  readonly fileInput = viewChild<ElementRef>('fileInput');
   selectedFile: File | null = null;
   uploadSuccess: boolean = false;
   uploadError: boolean = false;
