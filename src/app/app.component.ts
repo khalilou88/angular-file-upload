@@ -2,6 +2,8 @@ import { Component, ElementRef, signal, viewChild } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatIconModule } from '@angular/material/icon';
 
+//TODO add api
+//https://danielk.tech/home/angular-file-upload
 
 @Component({
   selector: 'app-root',
